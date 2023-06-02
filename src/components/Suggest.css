@@ -1,0 +1,244 @@
+.Opening {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: azure;
+  color: #0f0f0f;
+  width: 100%;
+  height: 101vh;
+  font-family: 'Inter', sans-serif;
+}
+
+.Suggest-Para{
+  margin-top: 150px;
+  opacity: 0;
+  animation: fade-in 2s ease-in-out forwards;
+  font-family: 'Inter', sans-serif;
+}
+
+.Below-Sugg{
+  padding-top: 100px;
+  opacity: 0;
+  animation: fade-in 5.5s ease-in-out forwards;
+  font-family: 'Inter', sans-serif;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.BelowOpen{
+  padding-top: 637px;
+  font-family: 'Inter', sans-serif;
+}
+
+.TopPara{
+  padding-bottom: 5px;
+  padding-left: 60px;
+  display: flex;
+  text-decoration: underline;
+  font-family: 'Inter', sans-serif;
+
+}
+
+.TopSongs {
+  background-color: #EEA4A4;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 140vh;
+  color: #0f0f0f;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 2s ease, transform 2s ease;
+  font-family: 'Inter', sans-serif;
+  
+}
+
+.TopSongs.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.SongList{
+  justify-content: center;
+  column-count: 2;
+  list-style-type: none;
+  margin-top: 50px;
+  text-decoration: solid;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: 'Inter', sans-serif;
+  margin-top: 20px; /* Increase the top margin for more spacing */
+  padding-left: 20; /* Remove the left padding to align the items properly */
+}
+
+.ArtistInfo {
+  display: flex;
+  align-items: center;
+  font-family: 'Inter', sans-serif;
+  margin-bottom: 45px; /* Add a margin to create space between artist info and song */
+
+}
+
+.ArtistName{
+  display: flex;
+  align-items: center;
+  padding-left: 210px;
+  font-family: 'Inter', sans-serif;
+  
+}
+.RecommendedArtists {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  overflow-x: auto;
+  white-space: nowrap; 
+  font-family: 'Inter', sans-serif; 
+}
+.ArtistInfo1 {
+  display: flex;
+  align-items: center;
+  font-family: 'Inter', sans-serif;
+}
+.ArtistName1 {
+  margin-top: 10px;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+}
+.ArtistItem1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ProfileImage1 {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.ProfileImage {
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  margin-right: 10px;
+  margin-top: -35px;
+}
+
+.BelowFirstArt{
+  margin-top: 70px;
+}
+
+.EverythingElse{
+  position: absolute;
+  background-color: #73E569;
+  margin-top: 1044px;
+  left: 0;
+  width: 100%;
+  height: 101vh;    
+  color: #0f0f0f;
+  font-family: 'Inter', sans-serif; 
+    
+
+}
+
+.RecommendedAlbums {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.AlbumItem {
+  width: calc(20% - 10px);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.AlbumCover {
+  width: 120px;
+  height: 120px;
+  border-radius: 8px;
+}
+
+.AlbumName {
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+.ArtistName2{
+  font-size: 20px;
+  font-family: 'Inter', sans-serif;
+}
+.Recs{
+  padding-left: 60px;
+  display: flex;
+  text-decoration: underline;
+  font-family: 'Inter', sans-serif;
+}
+
+.SearchForm{
+  margin-top: 80px;
+  font-family: 'Inter', sans-serif;
+}
+.SearchForm input[type="text"] {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  font-family: 'Inter', sans-serif;
+}
+
+.SearchForm button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-left: 10px;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+}
+
+.SearchForm button:hover {
+  background-color: #45a049;
+}
+.arrow-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+.arrow {
+  position: relative;
+  margin-top: 230px;
+  width: 40px;
+  height: 40px;
+  border-bottom: 2px solid #000;
+  border-right: 2px solid #000;
+  transform: rotate(45deg);
+  animation: arrowAnimation 1s infinite;
+}
+
+@keyframes arrowAnimation {
+  0% {
+    transform: rotate(45deg) translateY(0);
+  }
+  50% {
+    transform: rotate(45deg) translateY(10px);
+  }
+  100% {
+    transform: rotate(45deg) translateY(0);
+  }
+}
