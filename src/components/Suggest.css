@@ -76,6 +76,13 @@
   padding: 20px;
   box-sizing: border-box;
   overflow: hidden;
+  margin-top: 20px;
+  font-family: 'Inter', sans-serif;
+}
+
+.BelowOpen {
+  padding-top: 0;
+  font-family: 'Inter', sans-serif;
 }
 
 .TopSongs.fade-in {
@@ -107,13 +114,8 @@
 }
 
 @media (max-width: 768px) {
-  .BelowOpen{
-    padding-top: 80px;
-  }
-
   .TopSongs {
     padding: 10px;
-    position: absolute;
   }
 
   .SongList {
@@ -122,6 +124,10 @@
 
   .ArtistName {
     font-size: 14px;
+  }
+
+  .BelowOpen {
+    padding-top: 0;
   }
 }
 
