@@ -7,6 +7,7 @@
   background-size: cover;
   background-position: center;
   text-align: center;
+  background-color: midnightblue;
 
 }
   
@@ -36,7 +37,7 @@
   background-color: #1db954;
   border: none;
   border-radius: 4px;
-  color: #fff;
+  color: #ffffff;
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
@@ -61,7 +62,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: rgb(255, 255, 255);
   font-family: 'Inter', sans-serif;
 }
 

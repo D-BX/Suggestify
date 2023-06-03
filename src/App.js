@@ -2,8 +2,6 @@ import './App.css';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Suggest from './components/Suggest';
-import backgroundImage from './spotibackground.webp'; // Import your image file
-
 
 function App() {
   const CLIENT_ID = process.env.REACT_APP_SPOTIFY_CLIENT_ID;
@@ -34,7 +32,7 @@ function App() {
 
 
   return (
-    <div className="App" style={{ backgroundImage: `url(${backgroundImage})` }}>
+    <div className="App">
       <header className="App-header">
       <div className="SearchContainer">
   <h2>Suggestify</h2>

@@ -183,17 +183,19 @@ function Suggest(props) {
                 <li key={song.id}>
                   <div>{song.name}</div>
                   <div className="ArtistInfo">
-                    {artist && artist.images && artist.images.length > 0 ? (
-                      <LazyLoad once>
+                  {artist && artist.images && artist.images.length > 0 ? (
+                    <LazyLoad once>
+                      <a href={artist.external_urls?.spotify} target="_blank" rel="noopener noreferrer">
                         <img
                           src={artist.images[2].url} 
                           alt={artist.name}
                           className="ProfileImage"
                         />
-                      </LazyLoad>
-                    ) : null}
-                    <div className="ArtistName">{artist ? artist.name : ''}</div>
-                  </div>
+                      </a>
+                    </LazyLoad>
+                  ) : null}
+                  <div className="ArtistName">{artist ? artist.name : ''}</div>
+                </div>
                 </li>
               );
             })}
@@ -224,11 +226,14 @@ function Suggest(props) {
         <div className="ArtistItem1" key={artist.id}>
           {artistDetail.images && artistDetail.images.length > 0 ? (
             <LazyLoad once>
+              <a href={artist.external_urls?.spotify} target="_blank" rel="noopener noreferrer">
+
               <img
                 src={artistDetail.images[0].url} 
                 alt={artistDetail.name}
                 className="ProfileImage1"
               />
+              </a>
             </LazyLoad>
           ) : null}
           <div className="ArtistName1">{artistDetail.name}</div>
@@ -250,15 +255,17 @@ function Suggest(props) {
     const albumArtist = album.artists[0];
     return (
       <div className="AlbumItem" key={album.id}>
-        {album.images && album.images.length > 0 ? (
-          <LazyLoad once>
-            <img
-              src={album.images[0].url} 
-              alt={album.name}
-              className="AlbumCover"
-            />
-          </LazyLoad>
-        ) : null}
+            {album.images && album.images.length > 0 ? (
+              <LazyLoad once>
+                <a href={album.external_urls?.spotify} target="_blank" rel="noopener noreferrer">
+                  <img
+                    src={album.images[0].url} 
+                    alt={album.name}
+                    className="AlbumCover"
+                  />
+                </a>
+              </LazyLoad>
+            ) : null}
         <div className="AlbumName">{album.name}</div>
         <div className="ArtistName2">{albumArtist.name}</div>
       </div>
