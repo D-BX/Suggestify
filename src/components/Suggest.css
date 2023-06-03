@@ -107,7 +107,9 @@
 }
 
 @media (max-width: 768px) {
-
+  .BelowOpen{
+    padding-top: 80px;
+  }
 
   .TopSongs {
     padding: 10px;
