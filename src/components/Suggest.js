@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../App.css';
 import './Suggest.css';
 import axios from 'axios';
@@ -163,25 +163,6 @@ function Suggest(props) {
     };
   }, [fadeTopSongs]);
 
-  const openingRef = useRef(null);
-  const topSongsRef = useRef(null);
-  const [topSongsMarginTop, setTopSongsMarginTop] = useState(0);
-
-  useEffect(() => {
-    const handleResize = () => {
-      if (openingRef.current && topSongsRef.current) {
-        const openingHeight = openingRef.current.offsetHeight;
-        setTopSongsMarginTop(openingHeight + 20);
-      }
-    };
-
-    handleResize();
-
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
-
   return (
     <>
       <div className='Opening'>
@@ -191,13 +172,6 @@ function Suggest(props) {
         <div className="arrow-container">
           <div className="arrow"></div>
         </div>
-      </div>
-      <div
-        className="TopSongs fade-in"
-        style={{ marginTop: `${topSongsMarginTop}px` }}
-        ref={topSongsRef}
-      >
-        
       </div>
       <div className='BelowOpen'>
         <div className={`TopSongs ${fadeTopSongs ? 'fade-in' : ''}`}>

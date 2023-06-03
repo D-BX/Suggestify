@@ -1,3 +1,32 @@
+/* Common Styles */
+.Suggest-Para,
+.Below-Sugg,
+.TopPara,
+.TopSongs,
+.SongList,
+.ArtistInfo,
+.ArtistName,
+.RecommendedArtists,
+.ArtistInfo1,
+.ArtistName1,
+.ArtistItem1,
+.ProfileImage1,
+.ProfileImage,
+.BelowFirstArt,
+.EverythingElse,
+.RecommendedAlbums,
+.AlbumItem,
+.AlbumCover,
+.AlbumName,
+.ArtistName2,
+.Recs,
+.SearchForm,
+.arrow-container,
+.arrow {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Opening Section */
 .Opening {
   position: absolute;
   top: 0;
@@ -6,23 +35,9 @@
   color: #0f0f0f;
   width: 100%;
   height: 101vh;
-  font-family: 'Inter', sans-serif;
 }
 
-.Suggest-Para{
-  margin-top: 150px;
-  opacity: 0;
-  animation: fade-in 2s ease-in-out forwards;
-  font-family: 'Inter', sans-serif;
-}
-
-.Below-Sugg{
-  padding-top: 100px;
-  opacity: 0;
-  animation: fade-in 5.5s ease-in-out forwards;
-  font-family: 'Inter', sans-serif;
-}
-
+/* Animation */
 @keyframes fade-in {
   0% {
     opacity: 0;
@@ -33,32 +48,34 @@
     transform: translateY(0);
   }
 }
-.BelowOpen{
-  padding-top: 637px;
-  font-family: 'Inter', sans-serif;
+
+/* Suggest Section */
+.Suggest-Para {
+  margin-top: 150px;
+  opacity: 0;
+  animation: fade-in 2s ease-in-out forwards;
 }
 
-.TopPara{
-  padding-bottom: 5px;
-  padding-left: 60px;
-  display: flex;
-  text-decoration: underline;
-  font-family: 'Inter', sans-serif;
-
+.Below-Sugg {
+  padding-top: 100px;
+  opacity: 0;
+  animation: fade-in 5.5s ease-in-out forwards;
 }
 
+/* Top Songs Section */
 .TopSongs {
   background-color: #EEA4A4;
   position: absolute;
   left: 0;
   width: 100%;
-  height: 140vh;
+  height: auto;
   color: #0f0f0f;
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 2s ease, transform 2s ease;
-  font-family: 'Inter', sans-serif;
-  
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .TopSongs.fade-in {
@@ -66,53 +83,62 @@
   transform: translateY(0);
 }
 
-.SongList{
-  justify-content: center;
-  column-count: 2;
+.SongList {
   list-style-type: none;
-  margin-top: 50px;
-  text-decoration: solid;
+  margin-top: 20px;
   font-weight: bold;
-  font-size: 20px;
-  font-family: 'Inter', sans-serif;
-  margin-top: 20px; /* Increase the top margin for more spacing */
-  padding-left: 20; /* Remove the left padding to align the items properly */
+  font-size: 16px;
+  padding: 0;
+}
+
+.SongList li {
+  margin-bottom: 10px;
 }
 
 .ArtistInfo {
   display: flex;
   align-items: center;
-  font-family: 'Inter', sans-serif;
-  margin-bottom: 45px; /* Add a margin to create space between artist info and song */
-
+  margin-bottom: 20px;
 }
 
-.ArtistName{
-  display: flex;
-  align-items: center;
-  padding-left: 210px;
-  font-family: 'Inter', sans-serif;
-  
+.ArtistName {
+  margin-left: 10px;
+  font-size: 16px;
 }
+
+@media (max-width: 768px) {
+  .TopSongs {
+    padding: 20px;
+  }
+
+  .SongList {
+    font-size: 14px;
+  }
+
+  .ArtistName {
+    font-size: 14px;
+  }
+}
+
 .RecommendedArtists {
   margin-top: 20px;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 20px;
   overflow-x: auto;
-  white-space: nowrap; 
-  font-family: 'Inter', sans-serif; 
+  white-space: nowrap;
 }
+
 .ArtistInfo1 {
   display: flex;
   align-items: center;
-  font-family: 'Inter', sans-serif;
 }
+
 .ArtistName1 {
   margin-top: 10px;
   text-align: center;
-  font-family: 'Inter', sans-serif;
 }
+
 .ArtistItem1 {
   display: flex;
   flex-direction: column;
@@ -125,6 +151,7 @@
   object-fit: cover;
   border-radius: 50%;
 }
+
 .ProfileImage {
   border-radius: 50%;
   width: 90px;
@@ -134,21 +161,19 @@
   margin-top: -35px;
 }
 
-.BelowFirstArt{
+.BelowFirstArt {
   margin-top: 70px;
 }
 
-.EverythingElse{
+/* Everything Else Section */
+.EverythingElse {
   position: absolute;
   background-color: #73E569;
   margin-top: 1044px;
   left: 0;
   width: 100%;
-  height: 101vh;    
+  height: 101vh;
   color: #0f0f0f;
-  font-family: 'Inter', sans-serif; 
-    
-
 }
 
 .RecommendedAlbums {
@@ -175,28 +200,28 @@
   font-size: 20px;
 }
 
-.ArtistName2{
+.ArtistName2 {
   font-size: 20px;
-  font-family: 'Inter', sans-serif;
 }
-.Recs{
+
+/* Search Form */
+.Recs,
+.SearchForm {
   padding-left: 60px;
   display: flex;
   text-decoration: underline;
-  font-family: 'Inter', sans-serif;
 }
 
-.SearchForm{
+.SearchForm {
   margin-top: 80px;
-  font-family: 'Inter', sans-serif;
 }
+
 .SearchForm input[type="text"] {
   padding: 10px;
   border: none;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   font-size: 16px;
-  font-family: 'Inter', sans-serif;
 }
 
 .SearchForm button {
@@ -207,12 +232,13 @@
   border-radius: 5px;
   margin-left: 10px;
   cursor: pointer;
-  font-family: 'Inter', sans-serif;
 }
 
 .SearchForm button:hover {
   background-color: #45a049;
 }
+
+/* Arrow Animation */
 .arrow-container {
   display: flex;
   justify-content: center;
