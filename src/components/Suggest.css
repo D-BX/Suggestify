@@ -68,11 +68,14 @@
   position: absolute;
   left: 0;
   width: 100%;
-  height: 140vh;
+  height: auto;
   color: #0f0f0f;
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 2s ease, transform 2s ease;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .TopSongs.fade-in {
@@ -81,27 +84,40 @@
 }
 
 .SongList {
-  justify-content: center;
-  column-count: 2;
   list-style-type: none;
-  margin-top: 50px;
-  text-decoration: solid;
+  margin-top: 20px;
   font-weight: bold;
-  font-size: 20px;
-  margin-top: 20px; /* Increase the top margin for more spacing */
-  padding-left: 20; /* Remove the left padding to align the items properly */
+  font-size: 16px;
+  padding: 0;
+}
+
+.SongList li {
+  margin-bottom: 10px;
 }
 
 .ArtistInfo {
   display: flex;
   align-items: center;
-  margin-bottom: 45px; /* Add a margin to create space between artist info and song */
+  margin-bottom: 20px;
 }
 
 .ArtistName {
-  display: flex;
-  align-items: center;
-  padding-left: 210px;
+  margin-left: 10px;
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .TopSongs {
+    padding: 10px;
+  }
+
+  .SongList {
+    font-size: 14px;
+  }
+
+  .ArtistName {
+    font-size: 14px;
+  }
 }
 
 .RecommendedArtists {
