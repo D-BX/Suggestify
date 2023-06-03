@@ -34,7 +34,7 @@
   }
 }
 .BelowOpen{
-  padding-top: 637px;
+  padding-top: 627px;
   font-family: 'Inter', sans-serif;
 }
 
@@ -230,6 +230,7 @@
   transform: rotate(45deg);
   animation: arrowAnimation 1s infinite;
 }
+
 @keyframes arrowAnimation {
   0% {
     transform: rotate(45deg) translateY(0);
