@@ -199,7 +199,7 @@ function Suggest(props) {
             })}
           </ul>
           <h3 className='BelowFirstArt'>Let's see what you should listen to next.</h3>
-          <h3 className='BelowFirstArt1'>Use the search bar below to search for an artist, and we'll give you good recommendations.</h3>
+          <h3 className='BelowFirstArt1'>Use the search bar below to search for an artist, and we'll give you good recs.</h3>
         </div>
         <div className='EverythingElse'>
           <h2 className='Recs'>Recommendations </h2>
