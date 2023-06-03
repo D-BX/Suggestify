@@ -107,8 +107,11 @@
 }
 
 @media (max-width: 768px) {
+
+
   .TopSongs {
-    padding: 20px;
+    padding: 10px;
+    position: absolute;
   }
 
   .SongList {
